@@ -1,0 +1,194 @@
+
+:root {
+    /* Tamaños de texto */
+    --textSize: 1.5rem;
+    --textSizeLabel: 0.9rem;
+    --textSizePhone: 0.8rem;
+    --textSizeSocial: 0.7rem;
+
+    /* Fuente */
+    --fontFamily: Arial, Helvetica, sans-serif;
+
+    /* Colores */
+    --colorFirst: #000000;
+    --colorSecond: #ffc600;
+
+    /* Configuración de las secciones */
+    --contentWidth: 100%;
+    --contentHeight: 170px;
+    --maxWidth: fit-content;
+}
+/* Estilos generales */
+* {
+    font-family: var(--fontFamily);
+    padding: 0;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+    padding: 0px 50px;
+    
+}
+
+.sectionCard  {
+    background: #ffff;
+    display: flex;
+    width: var(--contentWidth);
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    min-height: 180px;
+    width: 50%;
+    overflow: hidden;
+    border-radius: 50px 0px 0px 00px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para agregar volumen */
+}
+
+.logo {
+    width: 40%;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+}
+
+.info {
+    padding: 16px;
+    width: 60%; 
+    border-left: 3px solid var(--colorSecond);
+}
+
+.name {
+    color: var(--colorFirst);
+    font-size: var(--textSize);
+    font-weight: bold;
+}
+
+.lastName {
+    color: var(--colorSecond);
+    font-size: var(--textSize);
+    font-weight: bold;
+}
+
+.label {
+    color: #fff;
+    font-size: var(--textSizeLabel);
+    padding: 4px 8px;
+    background: var(--colorFirst);
+    border-radius: 16px 0 0 0;
+    font-weight: bold;
+    max-width: var(--maxWidth);
+}
+
+.mail, .phone {
+    font-size: var(--textSizePhone);
+    color: #000;
+}
+
+a {
+    color: var(--colorFirst);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c7a52b;
+}
+
+.as {
+    font-weight: 500;
+}
+
+.ap {
+    font-weight: 300;
+}
+
+.stylePhoneMail {
+    text-decoration: underline;
+}
+
+.social {
+    color: #000;
+    font-size: var(--textSizeSocial);
+}
+
+/* Estilos para tablet */
+@media (max-width: 1140px) {
+    .sectionCard {
+        flex-direction: row;
+        align-items: center;
+        align-content: center; 
+        width: 100%;
+    }
+
+    .logo {
+        width: 100%;   
+    }
+
+    .logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .info {
+        width: 90%; 
+    }
+}
+
+/* Estilos para móvil */
+@media (max-width: 500px) {
+    .sectionCard {
+        flex-direction: row;
+        align-items: center;
+        align-content: center; 
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .logo {
+        align-items: center;
+        width: 100%;   
+    }
+
+    .logo img {
+        max-width: 80%;
+        max-height: 200px;
+    }
+
+    .info {
+        align-items: center;
+        width: 90%; 
+    }
+}
+
+@media (max-width: 440px) {
+    .sectionCard {
+        flex-direction: column;
+        align-items: center;
+        align-content: center; 
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .logo {
+        align-items: center;
+        width: 100%;   
+    }
+
+    .logo img {
+        max-width: 80%;
+        max-height: 200px;
+    }
+
+    .info {
+        align-items: center;
+        width: 90%; 
+    }
+}
+
